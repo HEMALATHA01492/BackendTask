@@ -102,7 +102,7 @@ app.get('/filesystem/:name',(req,res)=>{
         res.status(200).json({FileConentDetails:`${content_of_the_File}`})
 });
 });
-const PORT = 3003;
+const PORT = 3007;
 app.listen(PORT,()=>{
     console.log(`server listening on PORT ${PORT}`)
 })
