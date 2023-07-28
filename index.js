@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
 const fs = require('fs');
 const path = require('path');
 
@@ -11,7 +10,7 @@ app.use(express.json());
 
 
 app.get("/",(req,res)=>{
-    res.send("welcome!")
+    res.send("<h1>welcome!</h1>")
 
 })
 
@@ -102,7 +101,12 @@ app.get('/filesystem/:name',(req,res)=>{
         res.status(200).json({FileConentDetails:`${content_of_the_File}`})
 });
 });
+
+
+
 const PORT = 3007;
 app.listen(PORT,()=>{
     console.log(`server listening on PORT ${PORT}`)
 })
+
+
