@@ -69,7 +69,7 @@ const files=fs.readdirSync('C:/Users/Dell/Desktop/reactclass-BE/filesystem')
         }else{return}
     })      
    console.log(fileArray)
-
+  console.log(req.body)
  res.status(200).json({ALL_Text_file_Details:`${fileArray}`})
 
 })
@@ -83,6 +83,7 @@ app.get('/filesystem/allFiles',(req,res)=>{
       let fileArrays=[];
      files.forEach(file=>{fileArrays.push(file)})
      console.log(fileArrays)  
+     console.log(req.body)
      res.status(200).json({All_FileDetails:`${fileArrays}`})
 
 })
@@ -98,6 +99,7 @@ app.get('/filesystem/:name',(req,res)=>{
             return;
         }
         let content_of_the_File=data;
+        console.log(req.body)
         res.status(200).json({FileConentDetails:`${content_of_the_File}`})
 });
 });
